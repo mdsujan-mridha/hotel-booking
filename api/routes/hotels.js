@@ -6,7 +6,7 @@ import Hotel from "../models/Hotel.js";
 const router = express.Router();
 
 // CREATE 
-router.post("/", createHotel);
+router.post("/",  createHotel);
 // UPDATE 
 router.put("/:id",updateHotel )
 // DELETE 
