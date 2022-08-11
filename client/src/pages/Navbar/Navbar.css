@@ -3,6 +3,7 @@
     background-color: #003580;
     display: flex;
     justify-content: center;
+    border-bottom: 1.5px solid #1a659b;
 }
 .navbar-container{
     width: 100%;
