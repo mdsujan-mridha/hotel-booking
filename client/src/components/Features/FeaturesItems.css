@@ -1,0 +1,24 @@
+.features-img{
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.features-content{
+    height: 300px;
+}
+.features-title{
+    position: absolute;
+    bottom: 50px;
+    margin-left: 60px;
+}
+.features-title h1{
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+.features-title h1 span{
+    font-size: 25px;
+    font-weight: 600;
+}

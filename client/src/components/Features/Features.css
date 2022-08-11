@@ -1,0 +1,11 @@
+.features .featured-item{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative;
+    color: #fff;
+    z-index: 1;
+
+}
