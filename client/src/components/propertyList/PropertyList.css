@@ -1,0 +1,23 @@
+.property{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 1024px;
+}
+.plistItem{
+    width: 250px;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px  rgb(239, 235, 235);
+}
+.propertyImg{
+    width: 250px;
+    height: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.pListItem-title{
+    padding-left: 10px;
+    line-height: 10px;
+    padding-top: 20px;
+}

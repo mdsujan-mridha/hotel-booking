@@ -1,0 +1,53 @@
+.mail-container{
+    width: 100%;
+    margin-top: 100px;
+    background: #003580;
+    color: #fff;
+    padding: 50px 0px 50px;
+}
+.mailList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    line-height: 10px;
+}
+.mailList-title{
+    font-size: 25px;
+    padding-top: 60px;
+    font-weight: 600;
+}
+.mail_desc{
+    font-size: 16px;
+    font-weight: 600;
+}
+.inputContainer{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 10px;
+    padding: 15px 0px  50px;
+}
+.subscribe-input{
+    width: 35%;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+}
+.inputContainer input::placeholder{
+    padding-left: 10px;
+    font-size: 17px;
+    word-spacing: 5px;
+}
+.subscribe-btn{
+    width: 150px;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    background-color: #0071c2;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
