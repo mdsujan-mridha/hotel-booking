@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import hotelImg from "../img/Home-love/Villa-Wellness.jpg";
 import hotelImg2 from "../img/property/hotel.jpg";
 import hotelImg3 from "../img/property/villas.jpg";
@@ -7,7 +7,16 @@ import hotelImg5 from "../img/property/hotel.jpg";
 import hotelImg6 from "../img/property/villas.jpg";
 import { MdLocationPin } from "react-icons/md";
 import "./Hotel.css";
+import MailList from '../mailList/MailList';
+import Footer from '../../pages/Footer/Footer';
+import { FaArrowCircleRight,FaArrowCircleLeft } from "react-icons/fa";
+import { AiFillCloseCircle } from "react-icons/ai";
+
+
+
 const Hotel = () => {
+    const[sliderNumber,setSliderNumber] = useState(0);
+    const[open,setOpen] = useState(false);
     const photos = [
         {
             "hotelImg":hotelImg
@@ -27,10 +36,33 @@ const Hotel = () => {
         {
             "hotelImg":hotelImg6
         }
-    ]
+    ];
+    const handleOpen = (i)=>{
+     setSliderNumber(i);
+     setOpen(true);
+    };
+    const handleMove = (direction)=>{
+       let newSlideNumber;
+       if(direction === "l"){
+        newSlideNumber = sliderNumber === 0 ? 5 :sliderNumber-1
+       }else{
+        newSlideNumber = sliderNumber === 5 ? 0 :sliderNumber+1
+       }
+       setSliderNumber(newSlideNumber);
+    }
     return (
         <section>
             <div className="hotelContainer">
+                {open && <div className="slider">
+                            <AiFillCloseCircle className='sliderClose' onClick={()=>setOpen(false)}/>
+                           <FaArrowCircleLeft className='sliderLeftArrow'onClick={()=>handleMove("l")}/>  
+                           <div className="sliderWrapper">
+                            <img src={photos[sliderNumber]?.hotelImg} alt="" className="sliderImg" />
+                           </div>
+                           <FaArrowCircleRight className='sliderRightArrow'onClick={()=>handleMove("r")}/>
+                          
+                           </div>
+                }
                 <div className="hotelWrapper">
                     <button className="bookNow">Reserve or Book Now</button>
                     <h1 className='hotelTitle'> Grand Hotel </h1>
@@ -46,9 +78,9 @@ const Hotel = () => {
                     </span>
                     <div className="hotelImg">
                         {
-                            photos?.map(photo=>(
+                            photos?.map((photo,i)=>(
                                 <div className="hotelImgWrapper">
-                                    <img src={photo.hotelImg} alt="" className="hotelImgs" />
+                                    <img onClick={()=>handleOpen(i)} src={photo.hotelImg} alt="" className="hotelImgs" />
                                 </div>
                             ))
                         }
@@ -67,8 +99,15 @@ const Hotel = () => {
                            <button> Reserve or Book Now </button>
                         </div>
                     </div>
+                   
                 </div>
+                <MailList/>
+                   <div style={{marginTop:"50px"}} className="hotelWrapper">
+                   <Footer/>
+                   </div>
             </div>
+           
+                     
         </section>
     );
 };
