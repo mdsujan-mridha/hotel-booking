@@ -1,0 +1,129 @@
+.hotelContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.hotelWrapper {
+    width: 100%;
+    max-width: 1024px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.bookNow {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background-color: #0071c2;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.hotelTitle {
+    font-size: 24px;
+}
+
+.hotelAddress {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: gray;
+    font-weight: 600;
+}
+
+.hotelDistance {
+    color: #0071c2;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.priceHightLight {
+    color: #008009;
+    font-weight: 500;
+    font-size: 19px;
+    padding-bottom: 20px;
+}
+
+.hotelImg {
+    display: flex;
+    flex-wrap: wrap;
+    height: max-content;
+}
+
+.hotelImgWrapper {
+    width: 33%;
+
+}
+
+.hotelImgs {
+    width: 98%;
+    height: 200px;
+    object-fit: cover;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.hotelDetails {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 28px;
+}
+
+.hotelDetailsTexts {
+    flex: 3;
+}
+
+.hotelDetailsTexts>h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.hotelDesc {
+    text-align: justify;
+}
+
+.hotelDetailsPrice {
+    flex: 1;
+    background-color: #ebf3ff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 3px;
+}
+
+.hotelDetailsPrice>h1 {
+    font-size: 18px;
+    color: gray;
+    font-weight: 600;
+}
+.hotelDetailsPrice>span{
+    font-size: 14px;
+}
+.hotelDetailsPrice>h2{
+    font-weight: 600;
+}
+.hotelDetailsPrice>button{
+    background-color: #0071c2;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px;
+    cursor: pointer;
+}

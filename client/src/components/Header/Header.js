@@ -89,6 +89,7 @@ const Header = () => {
                                     moveRangeOnFirstSelection={false}
                                     ranges={date}
                                     className='date'
+                                    mainDate={new Date()}
                                 />
                             }
                         </div>
